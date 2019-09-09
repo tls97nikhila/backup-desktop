@@ -1,0 +1,13 @@
+body{
+    background: #666;
+}
+h1 {
+        font-size: 100px;
+        text-align: center;
+        margin-top: 50px;
+        font-family: serif;
+        letter-spacing: -5px;
+        color: darkred;
+        text-transform: capitalize;
+        text-shadow: 2px 3px 0 lightcoral;
+    }
