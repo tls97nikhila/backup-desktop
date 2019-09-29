@@ -1,7 +1,7 @@
 package com.stackroute.springbootneo4jexample1.controller;
 
 import com.stackroute.springbootneo4jexample1.model.Category;
-import com.stackroute.springbootneo4jexample1.model.Product;
+import com.stackroute.springbootneo4jexample1.model.RentItems;
 import com.stackroute.springbootneo4jexample1.model.User;
 import com.stackroute.springbootneo4jexample1.model.WishlistProduct;
 import com.stackroute.springbootneo4jexample1.service.UserService;
@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @GetMapping("/userrcm")
-    public Collection<Product> getAllRec() {
+    public Collection<RentItems> getAllRec() {
         return userService.getAllRecm();
     }
 

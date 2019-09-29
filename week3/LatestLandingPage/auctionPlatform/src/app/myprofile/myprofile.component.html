@@ -1,0 +1,70 @@
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+</head>
+<br><br><br><br>
+<h2 class="h1 py-5">My Profile</h2>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm ">
+          <img  class="img1" src="../../assets/profilepic.png" alt="image">
+        
+      </div>
+      <div class="col-sm info">
+            <div class="row"> Name: {{userData.userName}}
+            </div>
+            <div class="row">Email Id: {{userData.userEmail}}</div>
+            <div class="row">Aadhar Number:{{userData.userAadharNumber}}</div>
+            <div class="row">Phone Number:{{userData.userPhoneNumber}}</div>
+      </div>
+      <div class="col-sm">
+       
+      </div>
+    </div>
+    <div class="info">My Rental Products </div>
+   <div class="row">
+    <div class="col-md-3" fxLayout *ngFor="let product of userData.rentItems">
+            <mdb-card class="my-1">
+              <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap"></mdb-card-img>
+              <mdb-card-body>
+                <mdb-card-title>
+                  <h4>{{product.itemName}}</h4>
+                  </mdb-card-title>
+               
+                <p>{{product.itemDescription}}</p>
+                <button mdb-button mdbWavesEffect (click)=addToWishList(product)>Add to Wishlist</button>
+              </mdb-card-body>
+            </mdb-card>
+          </div> </div>
+
+          <div class="info">Products won on auction</div>
+          <div class="col-md-3 card-deck">
+                <!-- Card -->
+                <mdb-card>
+                  <div class="view overlay waves-light" mdbWavesEffect>
+                    <!-- Card img -->
+                    <mdb-card-img src="../../assets/jbl.jpeg" alt="Card image cap"></mdb-card-img>
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!--Card content-->
+                  <mdb-card-body>
+                    <!--Title-->
+                    <mdb-card-title>
+                      <h4>JBL speakers</h4>
+                    </mdb-card-title>
+              
+                    <!--Text-->
+                    <mdb-card-text> Used for 4 months, Available for 2 months to use
+                    </mdb-card-text>
+              
+                    <a href="#" mdbBtn color="alert" mdbWavesEffect>Make Payment</a>
+                  </mdb-card-body>
+                </mdb-card></div>
+            
+      </div>
+
+
+  
+  <br><br>
+

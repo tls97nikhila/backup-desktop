@@ -9,9 +9,9 @@ import java.util.List;
 public class Category {
     private String name;
     @Relationship(type = "BELONGS_TO", direction = Relationship.INCOMING)
-    private List<Product> products;
+    private List<RentItems> rentItems;
 
-    public List<Product> getProducts() {
-        return products;
+    public List<RentItems> getRentItems() {
+        return rentItems;
     }
 }

@@ -1,7 +1,7 @@
 package com.stackroute.springbootneo4jexample1.service;
 
 import com.stackroute.springbootneo4jexample1.model.Category;
-import com.stackroute.springbootneo4jexample1.model.Product;
+import com.stackroute.springbootneo4jexample1.model.RentItems;
 import com.stackroute.springbootneo4jexample1.model.User;
 import com.stackroute.springbootneo4jexample1.model.WishlistProduct;
 import com.stackroute.springbootneo4jexample1.repository.UserRepository;
@@ -19,8 +19,8 @@ public class UserService {
     public Collection<User> getAll() {
         return userRepository.getAllUsers();
     }
-    public Collection<Product> getAllProdcts() { return userRepository.getAllProducts(); }
-    public Collection<Product> getAllRecm() { return userRepository.getAllRecommendProducts(); }
+    public Collection<RentItems> getAllProdcts() { return userRepository.getAllProducts(); }
+    public Collection<RentItems> getAllRecm() { return userRepository.getAllRecommendProducts(); }
     public Collection<Category> getAllLikes(){ return userRepository.getAllLikes();}
     public  Collection<WishlistProduct> getMyFavs(){ return userRepository.getMyFavs();}
     public WishlistProduct saveMyFav(WishlistProduct wishlistProduct){

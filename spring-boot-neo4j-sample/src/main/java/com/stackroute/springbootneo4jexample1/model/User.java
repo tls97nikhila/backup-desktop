@@ -1,18 +1,18 @@
 package com.stackroute.springbootneo4jexample1.model;
 
-import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Relationship;
+import org.neo4j.ogm.annotation.*;
 
 import java.util.List;
 
 @NodeEntity
 public class User {
 
-    @GraphId
-    private Long id;
-    private String name;
-    private String emailid;
+  @GraphId
+
+  private String userEmail;
+    private String userName;
+
     private List<String> category;
     @Relationship(type = "LIKES", direction = Relationship.OUTGOING)
     private List<Category> categories;
@@ -21,21 +21,35 @@ public class User {
         return categories;
     }
 
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setCategory(List<String> category) {
+        this.category = category;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+    }
+
     public User() {
 
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getEmailid() {
-        return emailid;
-    }
 
     public List<String> getCategory() {
         return category;
